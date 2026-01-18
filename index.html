@@ -241,7 +241,26 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background: transparent;
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(10, 10, 15, 0.7) 100%),
+                url('images/hero-bg.png') center center / cover no-repeat;
+        }
+
+        .hero-image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask-image: linear-gradient(to right, transparent 0%, black 30%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
         }
 
         .hero::before {
@@ -452,6 +471,15 @@
 
         .about-image {
             position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .about-image-placeholder {
@@ -852,6 +880,10 @@
          HERO SECTION
          ================== -->
         <section class="hero" id="home">
+            <div class="hero-image-container">
+                <img src="images/hero-bg.png" alt="Digital nomad working from luxury overwater bungalow at sunset"
+                    loading="eager">
+            </div>
             <div class="nomad-container">
                 <div class="hero-content">
                     <span class="hero-label">Digital Freedom Architect</span>
@@ -872,6 +904,8 @@
         <section class="services" id="services">
             <div class="nomad-container">
                 <div class="section-header">
+                    <img src="images/funnel-graphic.png" alt="High-converting sales funnel visualization"
+                        style="width: 200px; height: 200px; margin: 0 auto 40px; display: block; filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.4));">
                     <h2>What We Create</h2>
                     <p>Strategic systems designed to convert, automate, and scale—so you can focus on what matters.</p>
                 </div>
@@ -910,10 +944,8 @@
             <div class="nomad-container">
                 <div class="about-grid">
                     <div class="about-image">
-                        <div class="about-image-placeholder">
-                            [Professional Photo]<br><br>
-                            Replace with high-quality image of Jose
-                        </div>
+                        <img src="images/jose-portrait.png"
+                            alt="Jose - Digital Strategist and Founder of Nomad Ventures" loading="lazy">
                     </div>
 
                     <div class="about-content">
