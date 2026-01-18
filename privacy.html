@@ -7,16 +7,21 @@
     <title>Privacy Policy | Nomad Ventures</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        /* Dark Glass-Morphism Theme */
         :root {
-            --deep-navy: #0a1628;
-            --ocean-teal: #0d9488;
-            --pearl-white: #f8fafc;
-            --slate: #64748b;
-            --slate-dark: #475569;
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.4);
         }
 
         *,
@@ -27,12 +32,17 @@
             padding: 0;
         }
 
+        html {
+            background: var(--bg-primary);
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--pearl-white);
-            color: var(--deep-navy);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.8;
             font-size: 16px;
+            min-height: 100vh;
         }
 
         .container {
@@ -42,51 +52,67 @@
         }
 
         .header {
-            background: var(--deep-navy);
-            padding: 40px 24px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 48px 24px;
             text-align: center;
         }
 
         .header h1 {
-            font-family: 'Playfair Display', serif;
-            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: var(--text-primary);
             font-size: 2.5rem;
             margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .header p {
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-muted);
             font-size: 0.875rem;
         }
 
         .back-link {
-            display: inline-block;
-            color: var(--ocean-teal);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-primary);
             text-decoration: none;
             margin-bottom: 40px;
             font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .back-link:hover {
-            text-decoration: underline;
+            color: var(--accent-secondary);
+        }
+
+        .back-link::before {
+            content: '←';
         }
 
         h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
-            margin: 40px 0 16px;
-            color: var(--deep-navy);
+            font-weight: 700;
+            margin: 48px 0 16px;
+            color: var(--text-primary);
         }
 
         h3 {
             font-size: 1.125rem;
+            font-weight: 600;
             margin: 24px 0 12px;
-            color: var(--deep-navy);
+            color: var(--text-primary);
         }
 
         p,
         li {
-            color: var(--slate-dark);
+            color: var(--text-secondary);
             margin-bottom: 16px;
         }
 
@@ -99,21 +125,30 @@
             margin-bottom: 8px;
         }
 
+        strong {
+            color: var(--text-primary);
+        }
+
         .legal-footer {
             margin-top: 60px;
             padding-top: 40px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid var(--glass-border);
             text-align: center;
         }
 
         .legal-footer p {
             font-size: 0.875rem;
-            color: var(--slate);
+            color: var(--text-muted);
         }
 
         .legal-footer a {
-            color: var(--ocean-teal);
+            color: var(--accent-primary);
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-footer a:hover {
+            color: var(--accent-secondary);
         }
     </style>
 </head>
@@ -125,7 +160,7 @@
     </div>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link">Back to Home</a>
 
         <p>Nomada Ventures LLC, doing business as "Nomad Ventures" ("Company," "we," "us," or "our"), is committed to
             protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your

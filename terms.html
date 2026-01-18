@@ -7,16 +7,21 @@
     <title>Terms of Service | Nomad Ventures</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
+        /* Dark Glass-Morphism Theme */
         :root {
-            --deep-navy: #0a1628;
-            --ocean-teal: #0d9488;
-            --pearl-white: #f8fafc;
-            --slate: #64748b;
-            --slate-dark: #475569;
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.4);
         }
 
         *,
@@ -27,12 +32,17 @@
             padding: 0;
         }
 
+        html {
+            background: var(--bg-primary);
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--pearl-white);
-            color: var(--deep-navy);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.8;
             font-size: 16px;
+            min-height: 100vh;
         }
 
         .container {
@@ -42,45 +52,67 @@
         }
 
         .header {
-            background: var(--deep-navy);
-            padding: 40px 24px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 48px 24px;
             text-align: center;
         }
 
         .header h1 {
-            font-family: 'Playfair Display', serif;
-            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: var(--text-primary);
             font-size: 2.5rem;
             margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .header p {
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--text-muted);
             font-size: 0.875rem;
         }
 
         .back-link {
-            display: inline-block;
-            color: var(--ocean-teal);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-primary);
             text-decoration: none;
             margin-bottom: 40px;
             font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .back-link:hover {
-            text-decoration: underline;
+            color: var(--accent-secondary);
+        }
+
+        .back-link::before {
+            content: '←';
         }
 
         h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
-            margin: 40px 0 16px;
-            color: var(--deep-navy);
+            font-weight: 700;
+            margin: 48px 0 16px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
         }
 
         p,
         li {
-            color: var(--slate-dark);
+            color: var(--text-secondary);
             margin-bottom: 16px;
         }
 
@@ -93,21 +125,30 @@
             margin-bottom: 8px;
         }
 
+        strong {
+            color: var(--text-primary);
+        }
+
         .legal-footer {
             margin-top: 60px;
             padding-top: 40px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid var(--glass-border);
             text-align: center;
         }
 
         .legal-footer p {
             font-size: 0.875rem;
-            color: var(--slate);
+            color: var(--text-muted);
         }
 
         .legal-footer a {
-            color: var(--ocean-teal);
+            color: var(--accent-primary);
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-footer a:hover {
+            color: var(--accent-secondary);
         }
     </style>
 </head>
@@ -119,91 +160,93 @@
     </div>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link">Back to Home</a>
 
-        <h2>1. Agreement to Terms</h2>
-        <p>By accessing or using the services provided by Nomada Ventures LLC, doing business as "Nomad Ventures"
-            ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not
-            agree to these Terms, you may not access or use our services.</p>
+        <p>Welcome to Nomad Ventures. These Terms of Service ("Terms") govern your use of our website and services
+            provided by Nomada Ventures LLC ("Company," "we," "us," or "our"). By accessing or using our services, you
+            agree to be bound by these Terms.</p>
 
-        <h2>2. Description of Services</h2>
-        <p>Nomad Ventures provides digital marketing services, including but not limited to:</p>
+        <h2>1. Services</h2>
+        <p>Nomad Ventures provides digital marketing services including but not limited to:</p>
         <ul>
-            <li>High-ticket sales funnel design and development</li>
-            <li>GoHighLevel CRM implementation and configuration</li>
-            <li>Marketing automation setup and management</li>
-            <li>Digital consulting and strategy services</li>
-            <li>Digital courses, training programs, and educational content</li>
+            <li>Sales funnel design and development</li>
+            <li>GoHighLevel CRM implementation and setup</li>
+            <li>Marketing automation systems</li>
+            <li>Consulting and strategy services</li>
+        </ul>
+        <p>The specific deliverables, timelines, and pricing for each project will be outlined in a separate proposal or
+            agreement.</p>
+
+        <h2>2. Client Responsibilities</h2>
+        <p>To ensure successful project delivery, clients agree to:</p>
+        <ul>
+            <li>Provide accurate and complete information as requested</li>
+            <li>Respond to communications in a timely manner</li>
+            <li>Provide access to necessary accounts and platforms</li>
+            <li>Review and approve deliverables within agreed timelines</li>
+            <li>Make payments according to the agreed schedule</li>
         </ul>
 
-        <h2>3. User Responsibilities</h2>
-        <p>By using our services, you agree to:</p>
+        <h2>3. Payment Terms</h2>
         <ul>
-            <li>Provide accurate and complete information when requested</li>
-            <li>Maintain the confidentiality of your account credentials</li>
-            <li>Use our services only for lawful purposes</li>
-            <li>Not reproduce, duplicate, or resell any portion of our services without express written permission</li>
-            <li>Comply with all applicable laws and regulations</li>
+            <li>Payment terms will be specified in your project proposal</li>
+            <li>A deposit may be required before work begins</li>
+            <li>All payments are processed securely through Stripe</li>
+            <li>Late payments may result in project delays or suspension</li>
+            <li>Prices are quoted in USD unless otherwise specified</li>
         </ul>
 
-        <h2>4. Payment Terms</h2>
-        <p>All payments are processed securely through Stripe. By making a purchase, you agree to:</p>
+        <h2>4. Intellectual Property</h2>
+        <p>Upon full payment:</p>
         <ul>
-            <li>Pay all fees and charges associated with your purchase</li>
-            <li>Provide valid payment information</li>
-            <li>Authorize us to charge your payment method for all fees incurred</li>
+            <li>Clients receive full ownership of custom deliverables created specifically for their project</li>
+            <li>Company retains the right to use project samples in portfolio (with client permission)</li>
+            <li>Third-party software, templates, and tools remain property of their respective owners</li>
+            <li>Company retains ownership of proprietary methods, systems, and frameworks</li>
         </ul>
-        <p>Prices are listed in US Dollars (USD) unless otherwise specified. We reserve the right to modify pricing at
-            any time, with changes taking effect for future purchases only.</p>
 
-        <h2>5. Intellectual Property</h2>
-        <p>All content, materials, and intellectual property provided through our services remain the exclusive property
-            of Nomada Ventures LLC. This includes, but is not limited to:</p>
+        <h2>5. Confidentiality</h2>
+        <p>Both parties agree to maintain confidentiality of sensitive business information shared during the course of
+            the engagement. This includes but is not limited to:</p>
         <ul>
-            <li>Course materials and training content</li>
-            <li>Templates, frameworks, and methodologies</li>
-            <li>Logos, trademarks, and branding elements</li>
-            <li>Website content and design</li>
+            <li>Business strategies and plans</li>
+            <li>Customer data and lists</li>
+            <li>Financial information</li>
+            <li>Proprietary processes and systems</li>
         </ul>
-        <p>You may not reproduce, distribute, or create derivative works without our express written consent.</p>
 
-        <h2>6. Disclaimer of Warranties</h2>
-        <p>Our services are provided "as is" and "as available" without warranties of any kind, either express or
-            implied. We do not guarantee specific results or outcomes from using our services. Success depends on many
-            factors unique to each individual or business.</p>
+        <h2>6. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law:</p>
+        <ul>
+            <li>Our liability is limited to the amount paid for services</li>
+            <li>We are not liable for indirect, incidental, or consequential damages</li>
+            <li>We do not guarantee specific results or revenue outcomes</li>
+            <li>Client is responsible for compliance with applicable laws and regulations</li>
+        </ul>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Nomada Ventures LLC shall not be liable for any indirect, incidental,
-            special, consequential, or punitive damages, including but not limited to loss of profits, data, or business
-            opportunities, arising from your use of our services.</p>
-        <p>Our total liability for any claims arising from these Terms or your use of our services shall not exceed the
-            amount you paid us in the twelve (12) months preceding the claim.</p>
+        <h2>7. Project Termination</h2>
+        <p>Either party may terminate a project with written notice. Upon termination:</p>
+        <ul>
+            <li>Client pays for all work completed up to termination date</li>
+            <li>Company delivers all work completed to date</li>
+            <li>Deposits may be non-refundable based on work already performed</li>
+        </ul>
+        <p>See our <a href="refunds.html">Refund Policy</a> for more details.</p>
 
-        <h2>8. Indemnification</h2>
-        <p>You agree to indemnify and hold harmless Nomada Ventures LLC, its officers, directors, employees, and agents
-            from any claims, damages, losses, or expenses arising from your use of our services or violation of these
-            Terms.</p>
+        <h2>8. Dispute Resolution</h2>
+        <p>Any disputes arising from these Terms will be resolved through:</p>
+        <ul>
+            <li>Good faith negotiation between parties</li>
+            <li>If unresolved, binding arbitration in New Mexico, USA</li>
+            <li>These Terms are governed by the laws of the State of New Mexico</li>
+        </ul>
 
-        <h2>9. Termination</h2>
-        <p>We reserve the right to suspend or terminate your access to our services at any time, with or without cause,
-            and with or without notice. Upon termination, your right to use our services will immediately cease.</p>
+        <h2>9. Modifications</h2>
+        <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated
+            date. Continued use of our services after changes constitutes acceptance of modified Terms.</p>
 
-        <h2>10. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the State of New Mexico, United
-            States, without regard to its conflict of law provisions.</p>
-
-        <h2>11. Dispute Resolution</h2>
-        <p>Any disputes arising from these Terms or your use of our services shall first be attempted to be resolved
-            through good-faith negotiation. If negotiation fails, disputes shall be resolved through binding arbitration
-            in accordance with the rules of the American Arbitration Association.</p>
-
-        <h2>12. Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to
-            our website. Your continued use of our services after changes are posted constitutes acceptance of the
-            modified Terms.</p>
-
-        <h2>13. Contact Information</h2>
-        <p>For questions about these Terms of Service, please contact us:</p>
+        <h2>10. Contact</h2>
+        <p>For questions about these Terms, please contact:</p>
         <p><strong>Nomada Ventures LLC</strong><br>
             Email: contact@nomadventures.com<br>
             New Mexico, USA</p>
