@@ -785,60 +785,281 @@
 
             .about-image {
                 order: -1;
-                max-width: 500px;
+                max-width: 400px;
                 margin: 0 auto;
+            }
+
+            .hero-image-container {
+                width: 50%;
+                opacity: 0.6;
             }
         }
 
         @media (max-width: 768px) {
+
+            /* Hero Section Mobile */
             .hero {
                 min-height: auto;
-                padding: 100px 0;
+                padding: 120px 0 80px;
+                background: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(10, 10, 15, 0.9) 100%),
+                    url('https://storage.googleapis.com/msgsndr/B97erermz0DoDHMJKqU5/media/696d0db4b34b644b6289cce0.webp') center center / cover no-repeat;
+            }
+
+            .hero-image-container {
+                display: none;
             }
 
             .hero-content {
-                padding: 40px 0;
+                padding: 20px 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .hero-label {
+                margin: 0 auto 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin: 0 auto 32px;
             }
 
             .hero-cta {
                 flex-direction: column;
+                align-items: center;
             }
 
             .hero-cta .btn {
+                width: 100%;
                 text-align: center;
             }
 
-            .services,
-            .about,
-            .contact {
-                padding: 80px 0;
+            /* Services Section Mobile */
+            .services {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 48px;
+            }
+
+            .section-header img {
+                width: 120px !important;
+                height: 120px !important;
+                margin-bottom: 24px !important;
+            }
+
+            .section-header h2 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card {
+                padding: 28px 24px;
+            }
+
+            .service-icon {
+                width: 52px;
+                height: 52px;
+                font-size: 1.25rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.125rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+            }
+
+            /* About Section Mobile */
+            .about {
+                padding: 60px 0;
+            }
+
+            .about-grid {
+                gap: 40px;
+            }
+
+            .about-image {
+                max-width: 280px;
+            }
+
+            .about-image::before {
+                top: -12px;
+                left: -12px;
+            }
+
+            .about-content h2 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+                text-align: center;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                text-align: center;
             }
 
             .about-stats {
                 flex-wrap: wrap;
-                gap: 24px;
+                justify-content: center;
+                gap: 20px;
             }
 
             .stat {
-                flex: 1 1 100px;
+                flex: 0 0 auto;
+                min-width: 90px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+            }
+
+            /* Contact Section Mobile */
+            .contact {
+                padding: 60px 0;
+            }
+
+            .contact-grid {
+                gap: 40px;
+            }
+
+            .contact-content {
+                text-align: center;
+            }
+
+            .contact-content h2 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+
+            .contact-item {
+                justify-content: center;
+                text-align: left;
             }
 
             .contact-form {
-                padding: 32px 24px;
+                padding: 28px 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 14px 16px;
+                font-size: 16px;
+                /* Prevents iOS zoom */
+            }
+
+            /* Footer Mobile */
+            .footer {
+                padding: 40px 0 24px;
             }
 
             .footer-content {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-brand {
+                margin-bottom: 24px;
             }
 
             .footer-links {
                 flex-direction: column;
-                gap: 32px;
+                gap: 24px;
+                width: 100%;
+            }
+
+            .footer-column {
+                text-align: center;
+            }
+
+            .footer-column ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .footer-column li {
+                margin-bottom: 0;
             }
 
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+                gap: 12px;
+            }
+
+            /* Global Mobile Adjustments */
+            .nomad-container {
+                padding: 0 16px;
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 16px 32px;
+                font-size: 0.8rem;
+            }
+
+            .service-card {
+                padding: 24px 20px;
+            }
+
+            .about-image {
+                max-width: 220px;
+            }
+
+            .about-stats {
+                gap: 16px;
+            }
+
+            .stat {
+                min-width: 80px;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .contact-form {
+                padding: 24px 16px;
             }
         }
 
@@ -881,8 +1102,8 @@
          ================== -->
         <section class="hero" id="home">
             <div class="hero-image-container">
-                <img src="https://storage.googleapis.com/msgsndr/B97erermz0DoDHMJKqU5/media/696d0db4b34b644b6289cce0.webp" alt="Digital nomad working from luxury overwater bungalow at sunset"
-                    loading="eager">
+                <img src="https://storage.googleapis.com/msgsndr/B97erermz0DoDHMJKqU5/media/696d0db4b34b644b6289cce0.webp"
+                    alt="Digital nomad working from luxury overwater bungalow at sunset" loading="eager">
             </div>
             <div class="nomad-container">
                 <div class="hero-content">
@@ -904,7 +1125,8 @@
         <section class="services" id="services">
             <div class="nomad-container">
                 <div class="section-header">
-                    <img src="https://storage.googleapis.com/msgsndr/B97erermz0DoDHMJKqU5/media/696d0db4b34b640b6489cce1.webp" alt="High-converting sales funnel visualization"
+                    <img src="https://storage.googleapis.com/msgsndr/B97erermz0DoDHMJKqU5/media/696d0db4b34b640b6489cce1.webp"
+                        alt="High-converting sales funnel visualization"
                         style="width: 200px; height: 200px; margin: 0 auto 40px; display: block; filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.4));">
                     <h2>What We Create</h2>
                     <p>Strategic systems designed to convert, automate, and scale—so you can focus on what matters.</p>
