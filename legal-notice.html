@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legal notice and disclaimers for Nomada Ventures LLC educational platform.">
+    <title>Legal Notice | Nomada Ventures</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--bg-primary);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Content */
+        .legal-content {
+            padding: 60px 0 80px;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .legal-header h1 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .legal-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .legal-section {
+            margin-bottom: 48px;
+        }
+
+        .legal-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .legal-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
+        }
+
+        .legal-section p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .legal-section ul,
+        .legal-section ol {
+            color: var(--text-secondary);
+            margin: 16px 0 16px 24px;
+            font-size: 0.95rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .highlight-box.warning {
+            border-color: rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .highlight-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .company-info {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .company-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .company-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-item strong {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item span {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--glass-border);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 40px 0 60px;
+            }
+
+            .legal-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .company-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index-education.html" class="logo">Nomada Ventures</a>
+            <a href="index-education.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="legal-content">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Legal Notice</h1>
+                <p>Last updated: January 29, 2026</p>
+            </div>
+
+            <!-- Company Information -->
+            <section class="legal-section">
+                <h2>Company Information</h2>
+                <div class="company-info">
+                    <h3>Nomada Ventures LLC</h3>
+                    <div class="company-info-grid">
+                        <div class="info-item">
+                            <strong>Legal Name</strong>
+                            <span>Nomada Ventures LLC</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Business Type</strong>
+                            <span>Limited Liability Company</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Jurisdiction</strong>
+                            <span>New York, United States</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Address</strong>
+                            <span>8125 Dongan Avenue, 2nd Floor<br>Queens, NY 11373, USA</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email</strong>
+                            <span>support@nomadaventures.com</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Website</strong>
+                            <span>www.nomada-ventures.com</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nature of Business -->
+            <section class="legal-section">
+                <h2>Nature of Business</h2>
+                <p>Nomada Ventures LLC is an educational technology company that provides digital learning products
+                    including:</p>
+                <ul>
+                    <li>Online courses and video training programs</li>
+                    <li>Digital guides, ebooks, and educational resources</li>
+                    <li>Subscription-based access to learning materials</li>
+                    <li>Group mentorship and coaching programs</li>
+                    <li>Educational newsletters and trend reports</li>
+                </ul>
+                <p>All products are delivered digitally through our online platform, providing immediate access upon
+                    purchase.</p>
+            </section>
+
+            <!-- Income Disclaimer -->
+            <section class="legal-section">
+                <h2>Income & Earnings Disclaimer</h2>
+                <div class="highlight-box warning">
+                    <h4>⚠️ Important Notice</h4>
+                    <p>The income or financial results mentioned in our courses, testimonials, or marketing materials
+                        are not typical. Individual results vary significantly based on effort, experience, market
+                        conditions, and numerous other factors beyond our control.</p>
+                </div>
+                <p>Nomada Ventures LLC makes no guarantees regarding:</p>
+                <ul>
+                    <li>Income or earnings potential from applying course content</li>
+                    <li>Specific business results or outcomes</li>
+                    <li>Employment opportunities after completing courses</li>
+                    <li>Return on investment</li>
+                </ul>
+                <p>The educational content we provide is for informational and educational purposes only. Success
+                    depends entirely on the individual's application of the knowledge, their unique circumstances,
+                    market conditions, and many other variables.</p>
+            </section>
+
+            <!-- Results Disclaimer -->
+            <section class="legal-section">
+                <h2>No Guarantee of Results</h2>
+                <p>By purchasing or using our educational products, you acknowledge and agree that:</p>
+                <ul>
+                    <li>We do not guarantee any specific results or outcomes</li>
+                    <li>Past performance or success stories do not guarantee future results</li>
+                    <li>Your results depend entirely on your own efforts and circumstances</li>
+                    <li>We are not responsible for your success or failure in applying course content</li>
+                </ul>
+                <p>All testimonials and case studies represent individual experiences and are not intended as promises
+                    of typical results.</p>
+            </section>
+
+            <!-- Third-Party Disclaimers -->
+            <section class="legal-section">
+                <h2>Third-Party Platform Disclaimers</h2>
+                <p>Nomada Ventures LLC is an independent entity and is <strong>NOT</strong> affiliated with, endorsed
+                    by, or sponsored by:</p>
+                <ul>
+                    <li><strong>Facebook / Meta:</strong> This site is not part of the Facebook website or Facebook Inc.
+                        Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of
+                        FACEBOOK, Inc.</li>
+                    <li><strong>Google:</strong> This site is not part of the Google website or Alphabet Inc. This site
+                        is NOT endorsed by Google in any way. GOOGLE is a trademark of GOOGLE LLC.</li>
+                    <li><strong>YouTube:</strong> This site is not part of YouTube or Google LLC.</li>
+                    <li><strong>Instagram:</strong> This site is not affiliated with Instagram or Meta Platforms, Inc.
+                    </li>
+                </ul>
+                <p>Any references to third-party platforms, tools, or services in our courses are for educational
+                    purposes only and do not imply any partnership or endorsement.</p>
+            </section>
+
+            <!-- Intellectual Property -->
+            <section class="legal-section">
+                <h2>Intellectual Property</h2>
+                <p>All content on this website and within our educational products, including but not limited to:</p>
+                <ul>
+                    <li>Course materials, videos, and presentations</li>
+                    <li>Written content, ebooks, and guides</li>
+                    <li>Graphics, logos, and branding elements</li>
+                    <li>Software, code, and digital tools</li>
+                </ul>
+                <p>...is the exclusive property of Nomada Ventures LLC and is protected by copyright, trademark, and
+                    other intellectual property laws. Unauthorized reproduction, distribution, or commercial use is
+                    strictly prohibited.</p>
+            </section>
+
+            <!-- Limitation of Liability -->
+            <section class="legal-section">
+                <h2>Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, Nomada Ventures LLC and its officers, directors,
+                    employees, and agents shall not be liable for any indirect, incidental, special, consequential, or
+                    punitive damages arising from:</p>
+                <ul>
+                    <li>Your use or inability to use our products or services</li>
+                    <li>Any decisions made based on our educational content</li>
+                    <li>Technical issues, interruptions, or errors on our platform</li>
+                    <li>Third-party actions or content</li>
+                </ul>
+                <p>Our total liability shall not exceed the amount you paid for the specific product or service giving
+                    rise to the claim.</p>
+            </section>
+
+            <!-- Governing Law -->
+            <section class="legal-section">
+                <h2>Governing Law</h2>
+                <p>This legal notice and all matters arising from your use of our website and products shall be governed
+                    by and construed in accordance with the laws of the State of New York, United States, without regard
+                    to its conflict of law principles.</p>
+                <p>Any disputes shall be resolved exclusively in the state or federal courts located in Queens County,
+                    New York.</p>
+            </section>
+
+            <!-- Contact -->
+            <section class="legal-section">
+                <h2>Contact Us</h2>
+                <p>For any questions regarding this legal notice or our business practices, please contact us:</p>
+                <div class="highlight-box">
+                    <p><strong>Email:</strong> support@nomadaventures.com</p>
+                    <p><strong>Address:</strong> Nomada Ventures LLC, 8125 Dongan Avenue, 2nd Floor, Queens, NY 11373,
+                        United States</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Nomada Ventures LLC. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index-education.html">Home</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="refunds.html">Refunds</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
