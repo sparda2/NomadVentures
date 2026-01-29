@@ -239,9 +239,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover .course-image img {
+            transform: scale(1.05);
         }
 
         .course-image::after {
@@ -252,6 +262,7 @@
             right: 0;
             height: 60px;
             background: linear-gradient(to top, var(--bg-card), transparent);
+            z-index: 1;
         }
 
         .course-category {
@@ -266,6 +277,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: white;
+            z-index: 2;
         }
 
         .course-content {
@@ -318,11 +330,14 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-enroll:hover {
             background: var(--accent-gradient);
             border-color: transparent;
+            color: white;
         }
 
         /* Subscription Section */
@@ -692,7 +707,8 @@
                 <div class="course-card" data-category="marketing">
                     <div class="course-image">
                         <span class="course-category">Marketing</span>
-                        📈
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_marketing_1769711456881.png"
+                            alt="Digital Marketing Fundamentals" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Digital Marketing Fundamentals</h3>
@@ -700,8 +716,8 @@
                             media, and paid advertising strategies.</p>
                         <div class="course-footer">
                             <div class="course-price">$29 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Digital Marketing Fundamentals">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -710,7 +726,8 @@
                 <div class="course-card" data-category="finance">
                     <div class="course-image">
                         <span class="course-category">Finance</span>
-                        💰
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_finance_1769711470946.png"
+                            alt="Personal Finance Mastery" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Personal Finance Mastery</h3>
@@ -718,8 +735,8 @@
                             independence with proven strategies.</p>
                         <div class="course-footer">
                             <div class="course-price">$47 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Personal Finance Mastery">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -728,7 +745,8 @@
                 <div class="course-card" data-category="personal-growth">
                     <div class="course-image">
                         <span class="course-category">Personal Growth</span>
-                        🌱
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_personal_growth_1769711485266.png"
+                            alt="Mindset & Productivity Bootcamp" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Mindset & Productivity Bootcamp</h3>
@@ -736,8 +754,8 @@
                             performance in business and life.</p>
                         <div class="course-footer">
                             <div class="course-price">$97 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Mindset & Productivity Bootcamp">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -746,7 +764,8 @@
                 <div class="course-card" data-category="coaching">
                     <div class="course-image">
                         <span class="course-category">Coaching</span>
-                        🎯
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_coaching_1769711500582.png"
+                            alt="Become a Certified Coach" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Become a Certified Coach</h3>
@@ -754,8 +773,8 @@
                             their goals and build your coaching business.</p>
                         <div class="course-footer">
                             <div class="course-price">$197 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Become a Certified Coach">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -764,7 +783,8 @@
                 <div class="course-card" data-category="technology">
                     <div class="course-image">
                         <span class="course-category">Technology</span>
-                        💻
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_technology_1769711515786.png"
+                            alt="No-Code App Development" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">No-Code App Development</h3>
@@ -772,8 +792,8 @@
                             using modern no-code platforms.</p>
                         <div class="course-footer">
                             <div class="course-price">$47 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="No-Code App Development">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -782,7 +802,8 @@
                 <div class="course-card" data-category="management">
                     <div class="course-image">
                         <span class="course-category">Management</span>
-                        👥
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_management_1769711532696.png"
+                            alt="Remote Team Leadership" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Remote Team Leadership</h3>
@@ -790,8 +811,8 @@
                             modern remote-first workplace.</p>
                         <div class="course-footer">
                             <div class="course-price">$29 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Remote Team Leadership">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -800,7 +821,8 @@
                 <div class="course-card" data-category="marketing">
                     <div class="course-image">
                         <span class="course-category">Marketing</span>
-                        📱
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_social_media_1769711562126.png"
+                            alt="Social Media Monetization" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Social Media Monetization</h3>
@@ -808,8 +830,8 @@
                             with proven monetization strategies.</p>
                         <div class="course-footer">
                             <div class="course-price">$97 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Social Media Monetization">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -818,7 +840,8 @@
                 <div class="course-card" data-category="finance">
                     <div class="course-image">
                         <span class="course-category">Finance</span>
-                        📊
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_investment_1769711579144.png"
+                            alt="Investment Strategies 101" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Investment Strategies 101</h3>
@@ -826,8 +849,8 @@
                             investments to grow your wealth long-term.</p>
                         <div class="course-footer">
                             <div class="course-price">$15 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Investment Strategies 101">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -836,7 +859,8 @@
                 <div class="course-card" data-category="personal-growth">
                     <div class="course-image">
                         <span class="course-category">Personal Growth</span>
-                        🧘
+                        <img src="https://raw.githubusercontent.com/sparda2/NomadVentures/main/images/course_wellness_1769711594713.png"
+                            alt="Wellness & Work-Life Balance" loading="lazy">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Wellness & Work-Life Balance</h3>
@@ -844,8 +868,8 @@
                             and emotional well-being.</p>
                         <div class="course-footer">
                             <div class="course-price">$9 <span>USD</span></div>
-                            <button class="btn-enroll"
-                                onclick="alert('Contact support@nomadaventures.com to enroll')">Enroll Now</button>
+                            <a href="index-education.html#contact" class="btn-enroll"
+                                data-course="Wellness & Work-Life Balance">Enroll Now</a>
                         </div>
                     </div>
                 </div>

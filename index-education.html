@@ -645,7 +645,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 16px 20px;
             border: 2px solid var(--glass-border);
@@ -657,13 +658,30 @@
             color: var(--text-primary);
         }
 
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(255,255,255,0.4)' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 48px;
+        }
+
+        .form-group select option {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 12px;
+        }
+
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: var(--text-muted);
         }
 
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--accent-primary);
             box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
@@ -1861,6 +1879,28 @@
                             <div class="form-group">
                                 <label for="email">Email Address</label>
                                 <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Course Interest</label>
+                                <select id="course" name="course">
+                                    <option value="">-- Select a Course (Optional) --</option>
+                                    <option value="Digital Marketing Fundamentals">Digital Marketing Fundamentals - $29
+                                    </option>
+                                    <option value="Personal Finance Mastery">Personal Finance Mastery - $47</option>
+                                    <option value="Mindset & Productivity Bootcamp">Mindset & Productivity Bootcamp -
+                                        $97</option>
+                                    <option value="Become a Certified Coach">Become a Certified Coach - $197</option>
+                                    <option value="No-Code App Development">No-Code App Development - $47</option>
+                                    <option value="Remote Team Leadership">Remote Team Leadership - $29</option>
+                                    <option value="Social Media Monetization">Social Media Monetization - $97</option>
+                                    <option value="Investment Strategies 101">Investment Strategies 101 - $15</option>
+                                    <option value="Wellness & Work-Life Balance">Wellness & Work-Life Balance - $9
+                                    </option>
+                                    <option value="Weekly Newsletter">Weekly Newsletter - $9/month</option>
+                                    <option value="Group Mentorship">Group Mentorship - $15/month</option>
+                                    <option value="Premium Access">Premium Access - $29/month</option>
+                                    <option value="Other">Other / General Inquiry</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="message">Your Message</label>
